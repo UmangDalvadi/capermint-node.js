@@ -1,4 +1,4 @@
-# Node.js Practical Project - Screenshots
+# Node.js Practical - Screenshots
 
 This document provides screenshots of the application to give a visual overview of its features and functionality.
 
@@ -10,9 +10,9 @@ This document provides screenshots of the application to give a visual overview 
 
 ![User Login](./public/images/user-login.png)
 
-## User Profile
+## Update User Profile
 
-![User Profile](./public/images/update-profile.png)
+![Update User Profile](./public/images/update-profile.png)
 
 ## View User Profile
 
