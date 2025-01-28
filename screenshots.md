@@ -2,7 +2,6 @@
 
 This document provides screenshots of the application to give a visual overview of its features and functionality.
 
-
 ## Admin Login
 
 ![Admin Login](./public/images/admin-login.png)
@@ -25,12 +24,8 @@ This document provides screenshots of the application to give a visual overview 
 
 ## Product Details
 
-![Product Details](./public/images/product-detail.png) 
+![Product Details](./public/images/product-detail.png)
 
 ## Search Product
 
-![Search Product](./public/images/search-product.png) 
-
-## Conclusion
-
-These screenshots illustrate the key functionalities of the application. For more details, refer to the main README.
+![Search Product](./public/images/search-product.png)
