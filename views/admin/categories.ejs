@@ -1,0 +1,45 @@
+<!-- views/admin/categories.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Categories</title>
+    <link rel="stylesheet" href="/styles.css"> 
+</head>
+<body>
+    <h2>Categories</h2>
+
+    <% if (successMessage) { %>
+        <div class="alert alert-success"><%= successMessage %></div>
+    <% } %>
+    <% if (errorMessage) { %>
+        <div class="alert alert-danger"><%= errorMessage %></div>
+    <% } %>
+
+    <ul>
+        <% categories.forEach(category => { %>
+            <li>
+                <%= category.name %> - Parent: <%= category.parentCategory ? category.parentCategory.name : "None" %>
+                <% if (category.children && category.children.length > 0) { %>
+                    <ul>
+                        <% category.children.forEach(child => { %>
+                            <li><%= child.name %></li>
+                        <% }); %>
+                    </ul>
+                <% } %>
+            </li>
+        <% }); %>
+    </ul>
+
+    <form action="/api/admin/categories" method="POST">
+        <input type="text" name="name" placeholder="Category Name" required>
+        <select name="parentCategory">
+            <option value="">None</option>
+            <% categories.forEach(category => { %>
+                <option value="<%= category._id %>"><%= category.name %></option>
+            <% }); %>
+        </select>
+        <button type="submit">Add Category</button>
+    </form>
+</body>
+</html>

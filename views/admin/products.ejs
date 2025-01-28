@@ -1,0 +1,41 @@
+<!-- views/admin/products.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Products</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h2>Products</h2>
+    <% if (successMessage) { %>
+        <div class="alert alert-success"><%= successMessage %></div>
+    <% } %>
+    <% if (errorMessage) { %>
+        <div class="alert alert-danger"><%= errorMessage %></div>
+    <% } %>
+    <form method="GET" action="/api/admin/products">
+        <input type="text" name="title" placeholder="Search by title">
+        <button type="submit">Search</button>
+    </form>
+    <ul>
+        <% products.forEach(product => { %>
+            <li>
+                <a href="/api/admin/products/<%= product._id %>"><%= product.title %></a> - Category: <%= product.category.name %>
+            </li>
+        <% }); %>
+    </ul>
+    <form action="/api/admin/products" method="POST" enctype="multipart/form-data">
+        <input type="text" name="title" placeholder="Product Title" required>
+        <select name="category" required>
+            <% categories.forEach(category => { %>
+                <option value="<%= category._id %>"><%= category.name %></option>
+            <% }); %>
+        </select>
+        <input type="text" name="description" placeholder="Description" required>
+        <input type="number" name="amount" placeholder="Amount" required>
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Add Product</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!-- views/admin/dashboard.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/styles.css"> 
+</head>
+<body>
+    <div class="container">
+        <h2>Admin Dashboard</h2>
+        <p>Welcome, <%= admin.username %>!</p>
+        <div class="dashboard-links">
+            <a href="/api/admin/products">Manage Products</a>
+            <a href="/api/admin/categories">Manage Categories</a>
+            <a href="/api/admin/logout">Logout</a>
+        </div>
+    </div>
+</body>
+</html>

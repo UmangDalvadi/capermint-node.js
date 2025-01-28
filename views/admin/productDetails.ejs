@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="/styles.css"> 
+</head>
+<body>
+    <div class="container">
+        <h2>Product Details</h2>
+        <div class="product-card">
+            <h3 class="product-title"><%= product.title %></h3>
+            <p class="product-category"><strong>Category:</strong> <%= product.category.name %></p>
+            <p class="product-description"><strong>Description:</strong> <%= product.description %></p>
+            <p class="product-amount"><strong>Amount:</strong> $<%= product.amount.toFixed(2) %></p>
+            <% if (product.image) { %>
+                <img class="product-image" src="data:image/jpeg;base64,<%= product.image %>" alt="<%= product.title %>" />
+            <% } else { %>
+                <p>No image available.</p>
+            <% } %>
+        </div>
+        <a class="back-link" href="/api/admin/products">Back to Products</a>
+    </div>
+</body>
+</html> 
