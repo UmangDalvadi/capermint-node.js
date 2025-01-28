@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "create-admin-script": "node ./script/createAdmin.js",
+    "add-categories-script": "node ./script/addCategories.js"
   },
   "keywords": [],
   "author": "",
