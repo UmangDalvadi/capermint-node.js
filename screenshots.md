@@ -2,6 +2,22 @@
 
 This document provides screenshots of the application to give a visual overview of its features and functionality.
 
+## User Register
+
+![User Register](./public/images/user-register.png)
+
+## User Login
+
+![User Login](./public/images/user-login.png)
+
+## User Profile
+
+![User Profile](./public/images/update-profile.png)
+
+## View User Profile
+
+![View User Profile](./public/images/view-profile.png)
+
 ## Admin Login
 
 ![Admin Login](./public/images/admin-login.png)
